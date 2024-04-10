@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Times Table</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  table {
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 10px;
+    border: 1px solid black;
+  }
+</style>
+</head>
+<body>
+<h1>Times Table</h1>
+<table id="times-table"></table>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var table = document.getElementById("times-table");
+  
+  for (var i = 1; i <= 12; i++) {
+    var row = document.createElement("tr");
+    for (var j = 1; j <= 12; j++) {
+      var cell = document.createElement("td");
+      cell.textContent = i * j;
+      row.appendChild(cell);
+    }
+    table.appendChild(row);
+  }
+});
+</script>
+</body>
+</html>
