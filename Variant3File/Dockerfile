@@ -5,4 +5,4 @@ FROM nginx:alpine
 COPY ./Variant2.html /usr/share/nginx/html/index.html
 
 # ポート80を公開
-EXPOSE 90
+EXPOSE 80
