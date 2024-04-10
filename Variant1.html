@@ -17,7 +17,7 @@
     padding: 10px;
     border: 1px solid black;
   }
-  td:hover {
+  td.hovered {
     background-color: yellow;
   }
 </style>
@@ -36,6 +36,13 @@ document.addEventListener("DOMContentLoaded", function() {
       var cell = document.createElement("td");
       cell.textContent = i * j;
       row.appendChild(cell);
+      // Add event listener for hover effect
+      cell.addEventListener("mouseover", function() {
+        this.classList.add("hovered");
+      });
+      cell.addEventListener("mouseout", function() {
+        this.classList.remove("hovered");
+      });
     }
     table.appendChild(row);
   }
@@ -43,3 +50,4 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 </body>
 </html>
+
